@@ -1,0 +1,136 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BITMAP_H	bitmap.h	4;"	d
+BITMAP_H	hints/bitmap.h	4;"	d
+CFLAGS	Makefile	/^CFLAGS := -g `pkg-config fuse --cflags`$/;"	m
+DIRECTORY_H	directory.h	4;"	d
+DIRECTORY_H	hints/directory.h	4;"	d
+DIRENT_MAX	nufs.c	21;"	d	file:
+DIR_NAME	directory.h	6;"	d
+DIR_NAME	hints/directory.h	6;"	d
+DIR_PAGE	nufs.c	19;"	d	file:
+FUSE_USE_VERSION	nufs.c	13;"	d	file:
+HDRS	Makefile	/^HDRS := $(wildcard *.h)$/;"	m
+INODE_H	hints/inode.h	4;"	d
+INODE_H	inode.h	4;"	d
+INODE_PAGE	nufs.c	20;"	d	file:
+LDLIBS	Makefile	/^LDLIBS := `pkg-config fuse --libs`$/;"	m
+NUFS_SIZE	hints/pages.c	/^const int NUFS_SIZE  = 4096 * 256; \/\/ 1MB$/;"	v
+NUFS_SIZE	pages.c	/^const int NUFS_SIZE  = 4096 * 256; \/\/ 1MB$/;"	v
+NUFS_STORAGE_H	hints/storage.h	4;"	d
+OBJS	Makefile	/^OBJS := $(SRCS:.c=.o)$/;"	m
+PAGES_H	hints/pages.h	4;"	d
+PAGES_H	pages.h	4;"	d
+PAGE_COUNT	hints/pages.c	/^const int PAGE_COUNT = 256;$/;"	v
+PAGE_COUNT	pages.c	/^const int PAGE_COUNT = 256;$/;"	v
+SLIST_H	hints/slist.h	4;"	d
+SLIST_H	slist.h	4;"	d
+SRCS	Makefile	/^SRCS := $(wildcard *.c)$/;"	m
+UTIL_H	hints/util.h	4;"	d
+UTIL_H	util.h	4;"	d
+_GNU_SOURCE	hints/pages.c	3;"	d	file:
+_GNU_SOURCE	pages.c	3;"	d	file:
+_reserved	directory.h	/^    char _reserved[12];$/;"	m	struct:my_dirent
+_reserved	hints/directory.h	/^    char _reserved[12];$/;"	m	struct:dirent
+alloc_page	hints/pages.c	/^alloc_page()$/;"	f
+alloc_page	pages.c	/^alloc_page()$/;"	f
+bitmap_get	bitmap.c	/^bitmap_get(void* bm, int ii)$/;"	f
+bitmap_get	hints/bitmap.c	/^bitmap_get(void* bm, int ii)$/;"	f
+bitmap_print	bitmap.c	/^bitmap_print(void* bm, int size)$/;"	f
+bitmap_print	hints/bitmap.c	/^bitmap_print(void* bm, int size)$/;"	f
+bitmap_put	bitmap.c	/^bitmap_put(void* bm, int ii, int vv)$/;"	f
+bitmap_put	hints/bitmap.c	/^bitmap_put(void* bm, int ii, int vv)$/;"	f
+bytes_to_pages	hints/util.h	/^bytes_to_pages(int bytes)$/;"	f
+bytes_to_pages	util.h	/^bytes_to_pages(int bytes)$/;"	f
+clamp	hints/util.h	/^clamp(int x, int v0, int v1)$/;"	f
+clamp	util.h	/^clamp(int x, int v0, int v1)$/;"	f
+data	hints/slist.h	/^    char* data;$/;"	m	struct:slist
+data	slist.h	/^    char* data;$/;"	m	struct:slist
+dirent	hints/directory.h	/^typedef struct dirent {$/;"	s
+dirent	hints/directory.h	/^} dirent;$/;"	t	typeref:struct:dirent
+dirent_t	directory.h	/^} dirent_t;$/;"	t	typeref:struct:my_dirent
+free_page	hints/pages.c	/^free_page(int pnum)$/;"	f
+free_page	pages.c	/^free_page(int pnum)$/;"	f
+get_inode_bitmap	hints/pages.c	/^get_inode_bitmap()$/;"	f
+get_inode_bitmap	pages.c	/^get_inode_bitmap()$/;"	f
+get_pages_bitmap	hints/pages.c	/^get_pages_bitmap()$/;"	f
+get_pages_bitmap	pages.c	/^get_pages_bitmap()$/;"	f
+inode	hints/inode.h	/^typedef struct inode {$/;"	s
+inode	hints/inode.h	/^} inode;$/;"	t	typeref:struct:inode
+inode	inode.h	/^typedef struct inode {$/;"	s
+inode	inode.h	/^} inode;$/;"	t	typeref:struct:inode
+inum	directory.h	/^    int  inum;$/;"	m	struct:my_dirent
+inum	hints/directory.h	/^    int  inum;$/;"	m	struct:dirent
+iptr	hints/inode.h	/^    int iptr; \/\/ single indirect pointer$/;"	m	struct:inode
+iptr	inode.h	/^    int iptr; \/\/ single indirect pointer$/;"	m	struct:inode
+join_to_path	hints/util.h	/^join_to_path(char* buf, char* item)$/;"	f
+join_to_path	util.h	/^join_to_path(char* buf, char* item)$/;"	f
+main	nufs.c	/^main(int argc, char *argv[])$/;"	f
+max	hints/util.h	/^max(int x, int y)$/;"	f
+max	util.h	/^max(int x, int y)$/;"	f
+min	hints/util.h	/^min(int x, int y)$/;"	f
+min	util.h	/^min(int x, int y)$/;"	f
+mode	hints/inode.h	/^    int mode; \/\/ permission & type$/;"	m	struct:inode
+mode	inode.h	/^    int mode; \/\/ permission & type$/;"	m	struct:inode
+mount	test.pl	/^sub mount {$/;"	s
+my_dirent	directory.h	/^typedef struct my_dirent {$/;"	s
+name	directory.h	/^    char name[DIR_NAME];$/;"	m	struct:my_dirent
+name	hints/directory.h	/^    char name[DIR_NAME];$/;"	m	struct:dirent
+next	hints/slist.h	/^    struct slist* next;$/;"	m	struct:slist	typeref:struct:slist::slist
+next	slist.h	/^    struct slist* next;$/;"	m	struct:slist	typeref:struct:slist::slist
+nufs_access	nufs.c	/^nufs_access(const char *path, int mask)$/;"	f
+nufs_chmod	nufs.c	/^nufs_chmod(const char *path, mode_t mode)$/;"	f
+nufs_getattr	nufs.c	/^nufs_getattr(const char *path, struct stat *st)$/;"	f
+nufs_init_ops	nufs.c	/^nufs_init_ops(struct fuse_operations* ops)$/;"	f
+nufs_ioctl	nufs.c	/^nufs_ioctl(const char* path, int cmd, void* arg, struct fuse_file_info* fi,$/;"	f
+nufs_link	nufs.c	/^nufs_link(const char *from, const char *to)$/;"	f
+nufs_mkdir	nufs.c	/^nufs_mkdir(const char *path, mode_t mode)$/;"	f
+nufs_mknod	nufs.c	/^nufs_mknod(const char *path, mode_t mode, dev_t rdev)$/;"	f
+nufs_open	nufs.c	/^nufs_open(const char *path, struct fuse_file_info *fi)$/;"	f
+nufs_ops	nufs.c	/^struct fuse_operations nufs_ops;$/;"	v	typeref:struct:fuse_operations
+nufs_read	nufs.c	/^nufs_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_file_info *fi)$/;"	f
+nufs_readdir	nufs.c	/^nufs_readdir(const char *path, void *buf, fuse_fill_dir_t filler,$/;"	f
+nufs_rename	nufs.c	/^nufs_rename(const char *from, const char *to)$/;"	f
+nufs_rmdir	nufs.c	/^nufs_rmdir(const char *path)$/;"	f
+nufs_truncate	nufs.c	/^nufs_truncate(const char *path, off_t size)$/;"	f
+nufs_unlink	nufs.c	/^nufs_unlink(const char *path)$/;"	f
+nufs_utimens	nufs.c	/^nufs_utimens(const char* path, const struct timespec ts[2])$/;"	f
+nufs_write	nufs.c	/^nufs_write(const char *path, const char *buf, size_t size, off_t offset, struct fuse_file_info *fi)$/;"	f
+pages_base	hints/pages.c	/^static void* pages_base =  0;$/;"	v	file:
+pages_base	pages.c	/^static void* pages_base =  0;$/;"	v	file:
+pages_fd	hints/pages.c	/^static int   pages_fd   = -1;$/;"	v	file:
+pages_fd	pages.c	/^static int   pages_fd   = -1;$/;"	v	file:
+pages_free	hints/pages.c	/^pages_free()$/;"	f
+pages_free	pages.c	/^pages_free()$/;"	f
+pages_get_page	hints/pages.c	/^pages_get_page(int pnum)$/;"	f
+pages_get_page	pages.c	/^pages_get_page(int pnum)$/;"	f
+pages_init	hints/pages.c	/^pages_init(const char* path)$/;"	f
+pages_init	pages.c	/^pages_init(const char* path)$/;"	f
+ptrs	hints/inode.h	/^    int ptrs[2]; \/\/ direct pointers$/;"	m	struct:inode
+ptrs	inode.h	/^    int ptrs[2]; \/\/ direct pointers$/;"	m	struct:inode
+read_text	test.pl	/^sub read_text {$/;"	s
+read_text_slice	test.pl	/^sub read_text_slice {$/;"	s
+refs	hints/inode.h	/^    int refs; \/\/ reference count$/;"	m	struct:inode
+refs	hints/slist.h	/^    int   refs;$/;"	m	struct:slist
+refs	inode.h	/^    int refs; \/\/ reference count$/;"	m	struct:inode
+refs	slist.h	/^    int   refs;$/;"	m	struct:slist
+s_cons	hints/slist.c	/^s_cons(const char* text, slist* rest)$/;"	f
+s_cons	slist.c	/^s_cons(const char* text, slist* rest)$/;"	f
+s_free	hints/slist.c	/^s_free(slist* xs)$/;"	f
+s_free	slist.c	/^s_free(slist* xs)$/;"	f
+s_split	hints/slist.c	/^s_split(const char* text, char delim)$/;"	f
+s_split	slist.c	/^s_split(const char* text, char delim)$/;"	f
+size	hints/inode.h	/^    int size; \/\/ bytes$/;"	m	struct:inode
+size	inode.h	/^    int size; \/\/ bytes$/;"	m	struct:inode
+slist	hints/slist.h	/^typedef struct slist {$/;"	s
+slist	hints/slist.h	/^} slist;$/;"	t	typeref:struct:slist
+slist	slist.h	/^typedef struct slist {$/;"	s
+slist	slist.h	/^} slist;$/;"	t	typeref:struct:slist
+streq	hints/util.h	/^streq(const char* aa, const char* bb)$/;"	f
+streq	util.h	/^streq(const char* aa, const char* bb)$/;"	f
+unmount	test.pl	/^sub unmount {$/;"	s
+write_text	test.pl	/^sub write_text {$/;"	s

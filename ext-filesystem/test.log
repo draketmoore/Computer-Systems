@@ -1,0 +1,1941 @@
+mkdir -p mnt || true
+./nufs -s -f mnt data.nufs
+fusermount -u mnt || true
+TODO: mount data.nufs as data file
+in getattr
+getattr(/one.txt) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/one.txt, 100644) -> 0
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 0}
+open(/one.txt) -> 0
+ioctl(/one.txt, 21505, ...) -> -1
+write here bed70000
+write(/one.txt, 11 bytes, @+0) -> 11
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 11}
+open(/one.txt) -> 0
+ioctl(/one.txt, 21505, ...) -> -1
+read here bed70000
+read(/one.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/two.txt) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/two.txt, 100644) -> 0
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 0}
+open(/two.txt) -> 0
+ioctl(/two.txt, 21505, ...) -> -1
+write here bed71000
+write(/two.txt, 11 bytes, @+0) -> 11
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+open(/two.txt) -> 0
+ioctl(/two.txt, 21505, ...) -> -1
+read here bed71000
+read(/two.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+readdir here bed6b000
+tokens: one.txt, (null)
+here 1
+file /one.txt
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 11}
+cut off path = one.txt
+tokens: two.txt, (null)
+here 2
+file /two.txt
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+cut off path = two.txt
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+readdir(/) -> 0
+in getattr
+getattr(/2k.txt) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/2k.txt, 100644) -> 0
+in getattr
+getattr(/2k.txt) -> (0) {mode: 100644, size: 0}
+open(/2k.txt) -> 0
+ioctl(/2k.txt, 21505, ...) -> -1
+write here bed72000
+write(/2k.txt, 2001 bytes, @+0) -> 2001
+open(/2k.txt) -> 0
+ioctl(/2k.txt, 21505, ...) -> -1
+in getattr
+getattr(/2k.txt) -> (0) {mode: 100644, size: 2001}
+read here bed72000
+read(/2k.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/2k.txt) -> (0) {mode: 100644, size: 2001}
+open(/2k.txt) -> 0
+ioctl(/2k.txt, 21505, ...) -> -1
+read here bed72000
+read(/2k.txt, 4096 bytes, @+0) -> 4096
+mkdir -p mnt || true
+./nufs -s -f mnt data.nufs
+TODO: mount data.nufs as data file
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+readdir here a4709000
+tokens: one.txt, (null)
+here 1
+file /one.txt
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 11}
+cut off path = one.txt
+tokens: two.txt, (null)
+here 2
+file /two.txt
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+cut off path = two.txt
+tokens: 2k.txt, (null)
+here 3
+file /2k.txt
+in getattr
+getattr(/2k.txt) -> (0) {mode: 100644, size: 2001}
+cut off path = 2k.txt
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+readdir(/) -> 0
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 11}
+open(/one.txt) -> 0
+ioctl(/one.txt, 21505, ...) -> -1
+read here a470e000
+read(/one.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/one.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+open(/two.txt) -> 0
+ioctl(/two.txt, 21505, ...) -> -1
+read here a470f000
+read(/two.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+unlink(/one.txt) -> 0
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+readdir here a4709000
+tokens: one.txt, (null)
+tokens: two.txt, (null)
+here 2
+file /two.txt
+in getattr
+getattr(/two.txt) -> (0) {mode: 100644, size: 11}
+cut off path = two.txt
+tokens: 2k.txt, (null)
+here 3
+file /2k.txt
+in getattr
+getattr(/2k.txt) -> (0) {mode: 100644, size: 2001}
+cut off path = 2k.txt
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+readdir(/) -> 0
+in getattr
+getattr(/abc.txt) -> (-2) {mode: 0000, size: 0}
+in getattr
+getattr(/abc.txt) -> (-2) {mode: 0000, size: 0}
+in getattr
+getattr(/abc.txt) -> (-2) {mode: 0000, size: 0}
+rename(/two.txt => /abc.txt) -> 0
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+readdir here a4709000
+tokens: one.txt, (null)
+tokens: abc.txt, (null)
+here 2
+file /abc.txt
+in getattr
+getattr(/abc.txt) -> (0) {mode: 100644, size: 11}
+cut off path = abc.txt
+tokens: 2k.txt, (null)
+here 3
+file /2k.txt
+in getattr
+getattr(/2k.txt) -> (0) {mode: 100644, size: 2001}
+cut off path = 2k.txt
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+readdir(/) -> 0
+open(/abc.txt) -> 0
+ioctl(/abc.txt, 21505, ...) -> -1
+in getattr
+getattr(/abc.txt) -> (0) {mode: 100644, size: 11}
+read here a470f000
+read(/abc.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/abc.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/def.txt) -> (-2) {mode: 0000, size: 0}
+in getattr
+getattr(/def.txt) -> (-2) {mode: 0000, size: 0}
+link(/abc.txt => /def.txt) -> 0
+here link 1
+out of loop
+got empty dirent
+mknod(/def.txt, 100644) -> 0
+here link 2
+before inum: 1
+after inum: 2
+in getattr
+getattr(/def.txt) -> (0) {mode: 100644, size: 11}
+open(/def.txt) -> 0
+ioctl(/def.txt, 21505, ...) -> -1
+read here a470f000
+read(/def.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/def.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/abc.txt) -> (0) {mode: 100644, size: 11}
+unlink(/abc.txt) -> 0
+open(/def.txt) -> 0
+ioctl(/def.txt, 21505, ...) -> -1
+read here a470f000
+read(/def.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/def.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/foo) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/foo, 40755) -> 0
+mkdir(/foo) -> 0
+in getattr
+getattr(/foo) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/foo/abc.txt) -> (-2) {mode: 0000, size: 0}
+in getattr
+getattr(/foo/abc.txt) -> (-2) {mode: 0000, size: 0}
+open(/def.txt) -> 0
+in getattr
+getattr(/foo/abc.txt) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/foo/abc.txt, 100644) -> 0
+in getattr
+getattr(/foo/abc.txt) -> (0) {mode: 100644, size: 0}
+open(/foo/abc.txt) -> 0
+read here a470f000
+read(/def.txt, 4096 bytes, @+0) -> 4096
+write here a4711000
+write(/foo/abc.txt, 11 bytes, @+0) -> 11
+in getattr
+getattr(/def.txt) -> (0) {mode: 40755, size: 0}
+open(/foo/abc.txt) -> 0
+ioctl(/foo/abc.txt, 21505, ...) -> -1
+in getattr
+getattr(/foo/abc.txt) -> (0) {mode: 100644, size: 11}
+read here a4711000
+read(/foo/abc.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/foo/abc.txt) -> (0) {mode: 100644, size: 11}
+in getattr
+getattr(/40k.txt) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/40k.txt, 100644) -> 0
+in getattr
+getattr(/40k.txt) -> (0) {mode: 100644, size: 0}
+open(/40k.txt) -> 0
+ioctl(/40k.txt, 21505, ...) -> -1
+write here a4712000
+write(/40k.txt, 4096 bytes, @+0) -> 4096
+write here a4713000
+write(/40k.txt, 4096 bytes, @+4096) -> 4096
+write here a4714000
+write(/40k.txt, 4096 bytes, @+8192) -> 4096
+write here a4715000
+write(/40k.txt, 4096 bytes, @+12288) -> 4096
+write here a4716000
+write(/40k.txt, 4096 bytes, @+16384) -> 4096
+write here a4717000
+write(/40k.txt, 4096 bytes, @+20480) -> 4096
+write here a4718000
+write(/40k.txt, 4096 bytes, @+24576) -> 4096
+write here a4719000
+write(/40k.txt, 4096 bytes, @+28672) -> 4096
+write here a471a000
+write(/40k.txt, 4096 bytes, @+32768) -> 4096
+write here a471b000
+write(/40k.txt, 3137 bytes, @+36864) -> 3137
+open(/40k.txt) -> 0
+ioctl(/40k.txt, 21505, ...) -> -1
+in getattr
+getattr(/40k.txt) -> (0) {mode: 100644, size: 40001}
+read here a4712000
+read(/40k.txt, 16384 bytes, @+0) -> 16384
+read here a4716000
+read(/40k.txt, 24576 bytes, @+16384) -> 24576
+in getattr
+getattr(/40k.txt) -> (0) {mode: 100644, size: 40001}
+open(/40k.txt) -> 0
+ioctl(/40k.txt, 21505, ...) -> -1
+read here a4713000
+read(/40k.txt, 12288 bytes, @+4096) -> 12288
+in access
+access(/, 0001) -> 0
+in getattr
+getattr(/dir1) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/dir1, 40755) -> 0
+mkdir(/dir1) -> 0
+in getattr
+getattr(/dir1) -> (0) {mode: 40755, size: 0}
+in access
+access(/dir1, 0001) -> 0
+in getattr
+getattr(/dir1/dir2) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/dir1/dir2, 40755) -> 0
+mkdir(/dir1/dir2) -> 0
+in getattr
+getattr(/dir1/dir2) -> (0) {mode: 40755, size: 0}
+in access
+access(/dir1/dir2, 0001) -> 0
+in getattr
+getattr(/dir1/dir2/dir3) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/dir1/dir2/dir3, 40755) -> 0
+mkdir(/dir1/dir2/dir3) -> 0
+in getattr
+getattr(/dir1/dir2/dir3) -> (0) {mode: 40755, size: 0}
+in access
+access(/dir1/dir2/dir3, 0001) -> 0
+in getattr
+getattr(/dir1/dir2/dir3/dir4) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/dir1/dir2/dir3/dir4, 40755) -> 0
+mkdir(/dir1/dir2/dir3/dir4) -> 0
+in getattr
+getattr(/dir1/dir2/dir3/dir4) -> (0) {mode: 40755, size: 0}
+in access
+access(/dir1/dir2/dir3/dir4, 0001) -> 0
+in getattr
+getattr(/dir1/dir2/dir3/dir4/dir5) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/dir1/dir2/dir3/dir4/dir5, 40755) -> 0
+mkdir(/dir1/dir2/dir3/dir4/dir5) -> 0
+in getattr
+getattr(/dir1/dir2/dir3/dir4/dir5) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/dir1/dir2/dir3/dir4/dir5/hello.txt) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/dir1/dir2/dir3/dir4/dir5/hello.txt, 100644) -> 0
+in getattr
+getattr(/dir1/dir2/dir3/dir4/dir5/hello.txt) -> (0) {mode: 100644, size: 0}
+open(/dir1/dir2/dir3/dir4/dir5/hello.txt) -> 0
+ioctl(/dir1/dir2/dir3/dir4/dir5/hello.txt, 21505, ...) -> -1
+write here a4718000
+write(/dir1/dir2/dir3/dir4/dir5/hello.txt, 12 bytes, @+0) -> 12
+open(/dir1/dir2/dir3/dir4/dir5/hello.txt) -> 0
+ioctl(/dir1/dir2/dir3/dir4/dir5/hello.txt, 21505, ...) -> -1
+in getattr
+getattr(/dir1/dir2/dir3/dir4/dir5/hello.txt) -> (0) {mode: 100644, size: 12}
+read here a4718000
+read(/dir1/dir2/dir3/dir4/dir5/hello.txt, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/dir1/dir2/dir3/dir4/dir5/hello.txt) -> (0) {mode: 100644, size: 12}
+in getattr
+getattr(/numbers) -> (-2) {mode: 0000, size: 0}
+in mkdir
+out of loop
+got empty dirent
+mknod(/numbers, 40755) -> 0
+mkdir(/numbers) -> 0
+in getattr
+getattr(/numbers) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/numbers/1.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/1.num, 100644) -> 0
+in getattr
+getattr(/numbers/1.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/1.num) -> 0
+ioctl(/numbers/1.num, 21505, ...) -> -1
+write here a471a000
+write(/numbers/1.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/2.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/2.num, 100644) -> 0
+in getattr
+getattr(/numbers/2.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/2.num) -> 0
+ioctl(/numbers/2.num, 21505, ...) -> -1
+write here a471b000
+write(/numbers/2.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/3.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/3.num, 100644) -> 0
+in getattr
+getattr(/numbers/3.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/3.num) -> 0
+ioctl(/numbers/3.num, 21505, ...) -> -1
+write here a471c000
+write(/numbers/3.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/4.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/4.num, 100644) -> 0
+in getattr
+getattr(/numbers/4.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/4.num) -> 0
+ioctl(/numbers/4.num, 21505, ...) -> -1
+write here a471d000
+write(/numbers/4.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/5.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/5.num, 100644) -> 0
+in getattr
+getattr(/numbers/5.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/5.num) -> 0
+ioctl(/numbers/5.num, 21505, ...) -> -1
+write here a471e000
+write(/numbers/5.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/6.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/6.num, 100644) -> 0
+in getattr
+getattr(/numbers/6.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/6.num) -> 0
+ioctl(/numbers/6.num, 21505, ...) -> -1
+write here a471f000
+write(/numbers/6.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/7.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/7.num, 100644) -> 0
+in getattr
+getattr(/numbers/7.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/7.num) -> 0
+ioctl(/numbers/7.num, 21505, ...) -> -1
+write here a4720000
+write(/numbers/7.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/8.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/8.num, 100644) -> 0
+in getattr
+getattr(/numbers/8.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/8.num) -> 0
+ioctl(/numbers/8.num, 21505, ...) -> -1
+write here a4721000
+write(/numbers/8.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/9.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/9.num, 100644) -> 0
+in getattr
+getattr(/numbers/9.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/9.num) -> 0
+ioctl(/numbers/9.num, 21505, ...) -> -1
+write here a4722000
+write(/numbers/9.num, 2 bytes, @+0) -> 2
+in getattr
+getattr(/numbers/10.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/10.num, 100644) -> 0
+in getattr
+getattr(/numbers/10.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/10.num) -> 0
+ioctl(/numbers/10.num, 21505, ...) -> -1
+write here a4723000
+write(/numbers/10.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/11.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/11.num, 100644) -> 0
+in getattr
+getattr(/numbers/11.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/11.num) -> 0
+ioctl(/numbers/11.num, 21505, ...) -> -1
+write here a4724000
+write(/numbers/11.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/12.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/12.num, 100644) -> 0
+in getattr
+getattr(/numbers/12.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/12.num) -> 0
+ioctl(/numbers/12.num, 21505, ...) -> -1
+write here a4725000
+write(/numbers/12.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/13.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/13.num, 100644) -> 0
+in getattr
+getattr(/numbers/13.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/13.num) -> 0
+ioctl(/numbers/13.num, 21505, ...) -> -1
+write here a4726000
+write(/numbers/13.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/14.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/14.num, 100644) -> 0
+in getattr
+getattr(/numbers/14.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/14.num) -> 0
+ioctl(/numbers/14.num, 21505, ...) -> -1
+write here a4727000
+write(/numbers/14.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/15.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/15.num, 100644) -> 0
+in getattr
+getattr(/numbers/15.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/15.num) -> 0
+ioctl(/numbers/15.num, 21505, ...) -> -1
+write here a4728000
+write(/numbers/15.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/16.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/16.num, 100644) -> 0
+in getattr
+getattr(/numbers/16.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/16.num) -> 0
+ioctl(/numbers/16.num, 21505, ...) -> -1
+write here a4729000
+write(/numbers/16.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/17.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/17.num, 100644) -> 0
+in getattr
+getattr(/numbers/17.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/17.num) -> 0
+ioctl(/numbers/17.num, 21505, ...) -> -1
+write here a472a000
+write(/numbers/17.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/18.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/18.num, 100644) -> 0
+in getattr
+getattr(/numbers/18.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/18.num) -> 0
+ioctl(/numbers/18.num, 21505, ...) -> -1
+write here a472b000
+write(/numbers/18.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/19.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/19.num, 100644) -> 0
+in getattr
+getattr(/numbers/19.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/19.num) -> 0
+ioctl(/numbers/19.num, 21505, ...) -> -1
+write here a472c000
+write(/numbers/19.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/20.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/20.num, 100644) -> 0
+in getattr
+getattr(/numbers/20.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/20.num) -> 0
+ioctl(/numbers/20.num, 21505, ...) -> -1
+write here a472d000
+write(/numbers/20.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/21.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/21.num, 100644) -> 0
+in getattr
+getattr(/numbers/21.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/21.num) -> 0
+ioctl(/numbers/21.num, 21505, ...) -> -1
+write here a472e000
+write(/numbers/21.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/22.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/22.num, 100644) -> 0
+in getattr
+getattr(/numbers/22.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/22.num) -> 0
+ioctl(/numbers/22.num, 21505, ...) -> -1
+write here a472f000
+write(/numbers/22.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/23.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/23.num, 100644) -> 0
+in getattr
+getattr(/numbers/23.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/23.num) -> 0
+ioctl(/numbers/23.num, 21505, ...) -> -1
+write here a4730000
+write(/numbers/23.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/24.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/24.num, 100644) -> 0
+in getattr
+getattr(/numbers/24.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/24.num) -> 0
+ioctl(/numbers/24.num, 21505, ...) -> -1
+write here a4731000
+write(/numbers/24.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/25.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/25.num, 100644) -> 0
+in getattr
+getattr(/numbers/25.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/25.num) -> 0
+ioctl(/numbers/25.num, 21505, ...) -> -1
+write here a4732000
+write(/numbers/25.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/26.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/26.num, 100644) -> 0
+in getattr
+getattr(/numbers/26.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/26.num) -> 0
+ioctl(/numbers/26.num, 21505, ...) -> -1
+write here a4733000
+write(/numbers/26.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/27.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/27.num, 100644) -> 0
+in getattr
+getattr(/numbers/27.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/27.num) -> 0
+ioctl(/numbers/27.num, 21505, ...) -> -1
+write here a4734000
+write(/numbers/27.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/28.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/28.num, 100644) -> 0
+in getattr
+getattr(/numbers/28.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/28.num) -> 0
+ioctl(/numbers/28.num, 21505, ...) -> -1
+write here a4735000
+write(/numbers/28.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/29.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/29.num, 100644) -> 0
+in getattr
+getattr(/numbers/29.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/29.num) -> 0
+ioctl(/numbers/29.num, 21505, ...) -> -1
+write here a4736000
+write(/numbers/29.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/30.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/30.num, 100644) -> 0
+in getattr
+getattr(/numbers/30.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/30.num) -> 0
+ioctl(/numbers/30.num, 21505, ...) -> -1
+write here a4737000
+write(/numbers/30.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/31.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/31.num, 100644) -> 0
+in getattr
+getattr(/numbers/31.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/31.num) -> 0
+ioctl(/numbers/31.num, 21505, ...) -> -1
+write here a4738000
+write(/numbers/31.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/32.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/32.num, 100644) -> 0
+in getattr
+getattr(/numbers/32.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/32.num) -> 0
+ioctl(/numbers/32.num, 21505, ...) -> -1
+write here a4739000
+write(/numbers/32.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/33.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/33.num, 100644) -> 0
+in getattr
+getattr(/numbers/33.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/33.num) -> 0
+ioctl(/numbers/33.num, 21505, ...) -> -1
+write here a473a000
+write(/numbers/33.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/34.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/34.num, 100644) -> 0
+in getattr
+getattr(/numbers/34.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/34.num) -> 0
+ioctl(/numbers/34.num, 21505, ...) -> -1
+write here a473b000
+write(/numbers/34.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/35.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/35.num, 100644) -> 0
+in getattr
+getattr(/numbers/35.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/35.num) -> 0
+ioctl(/numbers/35.num, 21505, ...) -> -1
+write here a473c000
+write(/numbers/35.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/36.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/36.num, 100644) -> 0
+in getattr
+getattr(/numbers/36.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/36.num) -> 0
+ioctl(/numbers/36.num, 21505, ...) -> -1
+write here a473d000
+write(/numbers/36.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/37.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/37.num, 100644) -> 0
+in getattr
+getattr(/numbers/37.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/37.num) -> 0
+ioctl(/numbers/37.num, 21505, ...) -> -1
+write here a473e000
+write(/numbers/37.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/38.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/38.num, 100644) -> 0
+in getattr
+getattr(/numbers/38.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/38.num) -> 0
+ioctl(/numbers/38.num, 21505, ...) -> -1
+write here a473f000
+write(/numbers/38.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/39.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/39.num, 100644) -> 0
+in getattr
+getattr(/numbers/39.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/39.num) -> 0
+ioctl(/numbers/39.num, 21505, ...) -> -1
+write here a4740000
+write(/numbers/39.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/40.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/40.num, 100644) -> 0
+in getattr
+getattr(/numbers/40.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/40.num) -> 0
+ioctl(/numbers/40.num, 21505, ...) -> -1
+write here a4741000
+write(/numbers/40.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/41.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/41.num, 100644) -> 0
+in getattr
+getattr(/numbers/41.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/41.num) -> 0
+ioctl(/numbers/41.num, 21505, ...) -> -1
+write here a4742000
+write(/numbers/41.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/42.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/42.num, 100644) -> 0
+in getattr
+getattr(/numbers/42.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/42.num) -> 0
+ioctl(/numbers/42.num, 21505, ...) -> -1
+write here a4743000
+write(/numbers/42.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/43.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/43.num, 100644) -> 0
+in getattr
+getattr(/numbers/43.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/43.num) -> 0
+ioctl(/numbers/43.num, 21505, ...) -> -1
+write here a4744000
+write(/numbers/43.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/44.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/44.num, 100644) -> 0
+in getattr
+getattr(/numbers/44.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/44.num) -> 0
+ioctl(/numbers/44.num, 21505, ...) -> -1
+write here a4745000
+write(/numbers/44.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/45.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/45.num, 100644) -> 0
+in getattr
+getattr(/numbers/45.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/45.num) -> 0
+ioctl(/numbers/45.num, 21505, ...) -> -1
+write here a4746000
+write(/numbers/45.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/46.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/46.num, 100644) -> 0
+in getattr
+getattr(/numbers/46.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/46.num) -> 0
+ioctl(/numbers/46.num, 21505, ...) -> -1
+write here a4747000
+write(/numbers/46.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/47.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/47.num, 100644) -> 0
+in getattr
+getattr(/numbers/47.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/47.num) -> 0
+ioctl(/numbers/47.num, 21505, ...) -> -1
+write here a4748000
+write(/numbers/47.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/48.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/48.num, 100644) -> 0
+in getattr
+getattr(/numbers/48.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/48.num) -> 0
+ioctl(/numbers/48.num, 21505, ...) -> -1
+write here a4749000
+write(/numbers/48.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/49.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/49.num, 100644) -> 0
+in getattr
+getattr(/numbers/49.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/49.num) -> 0
+ioctl(/numbers/49.num, 21505, ...) -> -1
+write here a474a000
+write(/numbers/49.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers/50.num) -> (-2) {mode: 0000, size: 0}
+out of loop
+got empty dirent
+mknod(/numbers/50.num, 100644) -> 0
+in getattr
+getattr(/numbers/50.num) -> (0) {mode: 100644, size: 0}
+open(/numbers/50.num) -> 0
+ioctl(/numbers/50.num, 21505, ...) -> -1
+write here a474b000
+write(/numbers/50.num, 3 bytes, @+0) -> 3
+in getattr
+getattr(/numbers) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+readdir here a4709000
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: .txt, (null)
+tokens: , (null)
+tokens: , (null)
+tokens: r2, (null)
+tokens: r2/dir3, /dir3
+tokens: r2/dir3/dir4, /dir3/dir4
+tokens: r2/dir3/dir4/dir5, /dir3/dir4/dir5
+tokens: r2/dir3/dir4/dir5/hello.txt, /dir3/dir4/dir5/hello.txt
+tokens: , (null)
+tokens: /1.num, (null)
+here 13
+file /numbers/1.num
+in getattr
+getattr(/numbers/1.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 1.num
+tokens: /2.num, (null)
+here 14
+file /numbers/2.num
+in getattr
+getattr(/numbers/2.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 2.num
+tokens: /3.num, (null)
+here 15
+file /numbers/3.num
+in getattr
+getattr(/numbers/3.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 3.num
+tokens: /4.num, (null)
+here 16
+file /numbers/4.num
+in getattr
+getattr(/numbers/4.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 4.num
+tokens: /5.num, (null)
+here 17
+file /numbers/5.num
+in getattr
+getattr(/numbers/5.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 5.num
+tokens: /6.num, (null)
+here 18
+file /numbers/6.num
+in getattr
+getattr(/numbers/6.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 6.num
+tokens: /7.num, (null)
+here 19
+file /numbers/7.num
+in getattr
+getattr(/numbers/7.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 7.num
+tokens: /8.num, (null)
+here 20
+file /numbers/8.num
+in getattr
+getattr(/numbers/8.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 8.num
+tokens: /9.num, (null)
+here 21
+file /numbers/9.num
+in getattr
+getattr(/numbers/9.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 9.num
+tokens: /10.num, (null)
+here 22
+file /numbers/10.num
+in getattr
+getattr(/numbers/10.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 10.num
+tokens: /11.num, (null)
+here 23
+file /numbers/11.num
+in getattr
+getattr(/numbers/11.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 11.num
+tokens: /12.num, (null)
+here 24
+file /numbers/12.num
+in getattr
+getattr(/numbers/12.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 12.num
+tokens: /13.num, (null)
+here 25
+file /numbers/13.num
+in getattr
+getattr(/numbers/13.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 13.num
+tokens: /14.num, (null)
+here 26
+file /numbers/14.num
+in getattr
+getattr(/numbers/14.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 14.num
+tokens: /15.num, (null)
+here 27
+file /numbers/15.num
+in getattr
+getattr(/numbers/15.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 15.num
+tokens: /16.num, (null)
+here 28
+file /numbers/16.num
+in getattr
+getattr(/numbers/16.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 16.num
+tokens: /17.num, (null)
+here 29
+file /numbers/17.num
+in getattr
+getattr(/numbers/17.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 17.num
+tokens: /18.num, (null)
+here 30
+file /numbers/18.num
+in getattr
+getattr(/numbers/18.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 18.num
+tokens: /19.num, (null)
+here 31
+file /numbers/19.num
+in getattr
+getattr(/numbers/19.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 19.num
+tokens: /20.num, (null)
+here 32
+file /numbers/20.num
+in getattr
+getattr(/numbers/20.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 20.num
+tokens: /21.num, (null)
+here 33
+file /numbers/21.num
+in getattr
+getattr(/numbers/21.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 21.num
+tokens: /22.num, (null)
+here 34
+file /numbers/22.num
+in getattr
+getattr(/numbers/22.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 22.num
+tokens: /23.num, (null)
+here 35
+file /numbers/23.num
+in getattr
+getattr(/numbers/23.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 23.num
+tokens: /24.num, (null)
+here 36
+file /numbers/24.num
+in getattr
+getattr(/numbers/24.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 24.num
+tokens: /25.num, (null)
+here 37
+file /numbers/25.num
+in getattr
+getattr(/numbers/25.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 25.num
+tokens: /26.num, (null)
+here 38
+file /numbers/26.num
+in getattr
+getattr(/numbers/26.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 26.num
+tokens: /27.num, (null)
+here 39
+file /numbers/27.num
+in getattr
+getattr(/numbers/27.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 27.num
+tokens: /28.num, (null)
+here 40
+file /numbers/28.num
+in getattr
+getattr(/numbers/28.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 28.num
+tokens: /29.num, (null)
+here 41
+file /numbers/29.num
+in getattr
+getattr(/numbers/29.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 29.num
+tokens: /30.num, (null)
+here 42
+file /numbers/30.num
+in getattr
+getattr(/numbers/30.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 30.num
+tokens: /31.num, (null)
+here 43
+file /numbers/31.num
+in getattr
+getattr(/numbers/31.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 31.num
+tokens: /32.num, (null)
+here 44
+file /numbers/32.num
+in getattr
+getattr(/numbers/32.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 32.num
+tokens: /33.num, (null)
+here 45
+file /numbers/33.num
+in getattr
+getattr(/numbers/33.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 33.num
+tokens: /34.num, (null)
+here 46
+file /numbers/34.num
+in getattr
+getattr(/numbers/34.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 34.num
+tokens: /35.num, (null)
+here 47
+file /numbers/35.num
+in getattr
+getattr(/numbers/35.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 35.num
+tokens: /36.num, (null)
+here 48
+file /numbers/36.num
+in getattr
+getattr(/numbers/36.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 36.num
+tokens: /37.num, (null)
+here 49
+file /numbers/37.num
+in getattr
+getattr(/numbers/37.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 37.num
+tokens: /38.num, (null)
+here 50
+file /numbers/38.num
+in getattr
+getattr(/numbers/38.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 38.num
+tokens: /39.num, (null)
+here 51
+file /numbers/39.num
+in getattr
+getattr(/numbers/39.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 39.num
+tokens: /40.num, (null)
+here 52
+file /numbers/40.num
+in getattr
+getattr(/numbers/40.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 40.num
+tokens: /41.num, (null)
+here 53
+file /numbers/41.num
+in getattr
+getattr(/numbers/41.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 41.num
+tokens: /42.num, (null)
+here 54
+file /numbers/42.num
+in getattr
+getattr(/numbers/42.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 42.num
+tokens: /43.num, (null)
+here 55
+file /numbers/43.num
+in getattr
+getattr(/numbers/43.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 43.num
+tokens: /44.num, (null)
+here 56
+file /numbers/44.num
+in getattr
+getattr(/numbers/44.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 44.num
+tokens: /45.num, (null)
+here 57
+file /numbers/45.num
+in getattr
+getattr(/numbers/45.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 45.num
+tokens: /46.num, (null)
+here 58
+file /numbers/46.num
+in getattr
+getattr(/numbers/46.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 46.num
+tokens: /47.num, (null)
+here 59
+file /numbers/47.num
+in getattr
+getattr(/numbers/47.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 47.num
+tokens: /48.num, (null)
+here 60
+file /numbers/48.num
+in getattr
+getattr(/numbers/48.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 48.num
+tokens: /49.num, (null)
+here 61
+file /numbers/49.num
+in getattr
+getattr(/numbers/49.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 49.num
+tokens: /50.num, (null)
+here 62
+file /numbers/50.num
+in getattr
+getattr(/numbers/50.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 50.num
+tokens: , (null)
+readdir(/numbers) -> 0
+open(/numbers/10.num) -> 0
+ioctl(/numbers/10.num, 21505, ...) -> -1
+in getattr
+getattr(/numbers/10.num) -> (0) {mode: 100644, size: 3}
+read here a4723000
+read(/numbers/10.num, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/numbers/10.num) -> (0) {mode: 100644, size: 3}
+open(/numbers/20.num) -> 0
+ioctl(/numbers/20.num, 21505, ...) -> -1
+in getattr
+getattr(/numbers/20.num) -> (0) {mode: 100644, size: 3}
+read here a472d000
+read(/numbers/20.num, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/numbers/20.num) -> (0) {mode: 100644, size: 3}
+open(/numbers/30.num) -> 0
+ioctl(/numbers/30.num, 21505, ...) -> -1
+in getattr
+getattr(/numbers/30.num) -> (0) {mode: 100644, size: 3}
+read here a4737000
+read(/numbers/30.num, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/numbers/30.num) -> (0) {mode: 100644, size: 3}
+open(/numbers/40.num) -> 0
+ioctl(/numbers/40.num, 21505, ...) -> -1
+in getattr
+getattr(/numbers/40.num) -> (0) {mode: 100644, size: 3}
+read here a4741000
+read(/numbers/40.num, 4096 bytes, @+0)fusermount -u mnt || true
+ -> 4096
+in getattr
+getattr(/numbers/40.num) -> (0) {mode: 100644, size: 3}
+open(/numbers/50.num) -> 0
+ioctl(/numbers/50.num, 21505, ...) -> -1
+in getattr
+getattr(/numbers/50.num) -> (0) {mode: 100644, size: 3}
+read here a474b000
+read(/numbers/50.num, 4096 bytes, @+0) -> 4096
+in getattr
+getattr(/numbers/50.num) -> (0) {mode: 100644, size: 3}
+in getattr
+getattr(/numbers/7.num) -> (0) {mode: 100644, size: 2}
+in access
+access(/numbers/7.num, 0002) -> 0
+unlink(/numbers/7.num) -> 0
+in getattr
+getattr(/numbers/14.num) -> (0) {mode: 100644, size: 3}
+in access
+access(/numbers/14.num, 0002) -> 0
+unlink(/numbers/14.num) -> 0
+in getattr
+getattr(/numbers/21.num) -> (0) {mode: 100644, size: 3}
+in access
+access(/numbers/21.num, 0002) -> 0
+unlink(/numbers/21.num) -> 0
+in getattr
+getattr(/numbers/28.num) -> (0) {mode: 100644, size: 3}
+in access
+access(/numbers/28.num, 0002) -> 0
+unlink(/numbers/28.num) -> 0
+mkdir -p mnt || true
+./nufs -s -f mnt data.nufs
+TODO: mount data.nufs as data file
+in getattr
+getattr(/numbers) -> (0) {mode: 40755, size: 0}
+in getattr
+getattr(/) -> (0) {mode: 40755, size: 0}
+readdir here 447a8000
+tokens: , (null)
+tokens: , (null)
+tokens: , (null)
+tokens: .txt, (null)
+tokens: , (null)
+tokens: , (null)
+tokens: r2, (null)
+tokens: r2/dir3, /dir3
+tokens: r2/dir3/dir4, /dir3/dir4
+tokens: r2/dir3/dir4/dir5, /dir3/dir4/dir5
+tokens: r2/dir3/dir4/dir5/hello.txt, /dir3/dir4/dir5/hello.txt
+tokens: , (null)
+tokens: /1.num, (null)
+here 13
+file /numbers/1.num
+in getattr
+getattr(/numbers/1.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 1.num
+tokens: /2.num, (null)
+here 14
+file /numbers/2.num
+in getattr
+getattr(/numbers/2.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 2.num
+tokens: /3.num, (null)
+here 15
+file /numbers/3.num
+in getattr
+getattr(/numbers/3.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 3.num
+tokens: /4.num, (null)
+here 16
+file /numbers/4.num
+in getattr
+getattr(/numbers/4.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 4.num
+tokens: /5.num, (null)
+here 17
+file /numbers/5.num
+in getattr
+getattr(/numbers/5.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 5.num
+tokens: /6.num, (null)
+here 18
+file /numbers/6.num
+in getattr
+getattr(/numbers/6.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 6.num
+tokens: /7.num, (null)
+tokens: /8.num, (null)
+here 20
+file /numbers/8.num
+in getattr
+getattr(/numbers/8.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 8.num
+tokens: /9.num, (null)
+here 21
+file /numbers/9.num
+in getattr
+getattr(/numbers/9.num) -> (0) {mode: 100644, size: 2}
+cut off path = numbers
+cut off path = 9.num
+tokens: /10.num, (null)
+here 22
+file /numbers/10.num
+in getattr
+getattr(/numbers/10.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 10.num
+tokens: /11.num, (null)
+here 23
+file /numbers/11.num
+in getattr
+getattr(/numbers/11.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 11.num
+tokens: /12.num, (null)
+here 24
+file /numbers/12.num
+in getattr
+getattr(/numbers/12.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 12.num
+tokens: /13.num, (null)
+here 25
+file /numbers/13.num
+in getattr
+getattr(/numbers/13.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 13.num
+tokens: /14.num, (null)
+tokens: /15.num, (null)
+here 27
+file /numbers/15.num
+in getattr
+getattr(/numbers/15.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 15.num
+tokens: /16.num, (null)
+here 28
+file /numbers/16.num
+in getattr
+getattr(/numbers/16.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 16.num
+tokens: /17.num, (null)
+here 29
+file /numbers/17.num
+in getattr
+getattr(/numbers/17.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 17.num
+tokens: /18.num, (null)
+here 30
+file /numbers/18.num
+in getattr
+getattr(/numbers/18.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 18.num
+tokens: /19.num, (null)
+here 31
+file /numbers/19.num
+in getattr
+getattr(/numbers/19.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 19.num
+tokens: /20.num, (null)
+here 32
+file /numbers/20.num
+in getattr
+getattr(/numbers/20.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 20.num
+tokens: /21.num, (null)
+tokens: /22.num, (null)
+here 34
+file /numbers/22.num
+in getattr
+getattr(/numbers/22.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 22.num
+tokens: /23.num, (null)
+here 35
+file /numbers/23.num
+in getattr
+getattr(/numbers/23.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 23.num
+tokens: /24.num, (null)
+here 36
+file /numbers/24.num
+in getattr
+getattr(/numbers/24.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 24.num
+tokens: /25.num, (null)
+here 37
+file /numbers/25.num
+in getattr
+getattr(/numbers/25.num) -> (0) {mode: 100644, size: 3}
+fusermount -u mnt || true
+cut off path = numbers
+cut off path = 25.num
+tokens: /26.num, (null)
+here 38
+file /numbers/26.num
+in getattr
+getattr(/numbers/26.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 26.num
+tokens: /27.num, (null)
+here 39
+file /numbers/27.num
+in getattr
+getattr(/numbers/27.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 27.num
+tokens: /28.num, (null)
+tokens: /29.num, (null)
+here 41
+file /numbers/29.num
+in getattr
+getattr(/numbers/29.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 29.num
+tokens: /30.num, (null)
+here 42
+file /numbers/30.num
+in getattr
+getattr(/numbers/30.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 30.num
+tokens: /31.num, (null)
+here 43
+file /numbers/31.num
+in getattr
+getattr(/numbers/31.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 31.num
+tokens: /32.num, (null)
+here 44
+file /numbers/32.num
+in getattr
+getattr(/numbers/32.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 32.num
+tokens: /33.num, (null)
+here 45
+file /numbers/33.num
+in getattr
+getattr(/numbers/33.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 33.num
+tokens: /34.num, (null)
+here 46
+file /numbers/34.num
+in getattr
+getattr(/numbers/34.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 34.num
+tokens: /35.num, (null)
+here 47
+file /numbers/35.num
+in getattr
+getattr(/numbers/35.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 35.num
+tokens: /36.num, (null)
+here 48
+file /numbers/36.num
+in getattr
+getattr(/numbers/36.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 36.num
+tokens: /37.num, (null)
+here 49
+file /numbers/37.num
+in getattr
+getattr(/numbers/37.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 37.num
+tokens: /38.num, (null)
+here 50
+file /numbers/38.num
+in getattr
+getattr(/numbers/38.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 38.num
+tokens: /39.num, (null)
+here 51
+file /numbers/39.num
+in getattr
+getattr(/numbers/39.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 39.num
+tokens: /40.num, (null)
+here 52
+file /numbers/40.num
+in getattr
+getattr(/numbers/40.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 40.num
+tokens: /41.num, (null)
+here 53
+file /numbers/41.num
+in getattr
+getattr(/numbers/41.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 41.num
+tokens: /42.num, (null)
+here 54
+file /numbers/42.num
+in getattr
+getattr(/numbers/42.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 42.num
+tokens: /43.num, (null)
+here 55
+file /numbers/43.num
+in getattr
+getattr(/numbers/43.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 43.num
+tokens: /44.num, (null)
+here 56
+file /numbers/44.num
+in getattr
+getattr(/numbers/44.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 44.num
+tokens: /45.num, (null)
+here 57
+file /numbers/45.num
+in getattr
+getattr(/numbers/45.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 45.num
+tokens: /46.num, (null)
+here 58
+file /numbers/46.num
+in getattr
+getattr(/numbers/46.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 46.num
+tokens: /47.num, (null)
+here 59
+file /numbers/47.num
+in getattr
+getattr(/numbers/47.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 47.num
+tokens: /48.num, (null)
+here 60
+file /numbers/48.num
+in getattr
+getattr(/numbers/48.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 48.num
+tokens: /49.num, (null)
+here 61
+file /numbers/49.num
+in getattr
+getattr(/numbers/49.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 49.num
+tokens: /50.num, (null)
+here 62
+file /numbers/50.num
+in getattr
+getattr(/numbers/50.num) -> (0) {mode: 100644, size: 3}
+cut off path = numbers
+cut off path = 50.num
+tokens: , (null)
+readdir(/numbers) -> 0
